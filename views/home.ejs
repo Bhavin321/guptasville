@@ -25,7 +25,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guptasville</title>
 
-  
 
   <style>
 
@@ -247,50 +246,127 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 
+
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: teal;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: teal
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: teal;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
   </style>
 </head>
 
 <body id="home" class="scrollspy">
   <div class="navbar-fixed">
-    <nav class="teal">
-      <div class="container">
-        <a href="/" class="brand-logo">Guptasville</a>
-        <a href="#" data-activates="mobile-nav" class="button-collapse">
-          <i class="material-icons">menu</i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="login">Login</a>
-          </li>
-          <li>
-            <a href="signup">Sign Up</a>
-          </li>
-        </ul>
+    <div class="nav teal">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          Guptasville
+        </div>
       </div>
-    </nav>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/" target="_blank">Home</a>
+        <a href="login" target="_blank">Login</a>
+        <a href="signup" target="_blank">SignUp</a>
+        
+      </div>
+    </div>
   </div>
-  <!-- we put the sideNav li elements outside the div because its fixed div and we wont be able to access these links -->
-  <ul class="side-nav" id="mobile-nav">
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="login">Login</a>
-    </li>
-    <li>
-      <a href="signup">Sign up</a>
-    </li>
-    <!-- add a footer to sidenav -->
-  </ul>
-
-  <!-- Section: Slider -->
-
-  <!-- Full Page Image Background Carousel Header -->
+ 
  <div>
-  <div class="slideshow-container">
+  <div class="slideshow-container" style="top: -15px;">
 
     <div class="mySlides fade">
       
@@ -380,13 +456,13 @@ img {vertical-align: middle;}
   <section class="section section-icons grey lighten-4 center">
     <div class="container">
       <h4 class="center">
-        <span class="teal-text"><h2>ACCOMODATION</h2></span></h4></br>
+        <span class="teal-text"><h3> <b>ACCOMODATION</b></h3></span></h4></br>
       <div class="row">
         <div class="col s12 m4">
           <div class="card-panel">
             <img src="img/room3.jpg" alt="" width="350" height="250"  id="acc">
             <div class="room-title" >
-              <h3><b>Single Suite -1 guest</b></h3>
+              <h3><b>Single Room</b></h3>
               <div class="photo_cap">
                 <a href="img/facilities.jpg" class="lightbox" data-gall="gall-room"><i class="glyphicon glyphicon-search"></i></a>
             </div>
@@ -410,7 +486,7 @@ img {vertical-align: middle;}
             <div class="card-panel">
               <img src="img/room1.jpg" alt=""  width="350" height="250">
               <div class="room-title">
-                <h3><b>Couple Suite -2 guests</b></h3>
+                <h3><b>Family Special Room</b></h3>
                 <div class="photo_cap">
                   <a href="img/facilities.jpg" class="lightbox" data-gall="gall-room"><i class="glyphicon glyphicon-search"></i></a>
               </div>
@@ -433,7 +509,7 @@ img {vertical-align: middle;}
               <div class="card-panel">
                 <img src="img/room2.jpg" alt=""  width="350" height="250">
                 <div class="room-title">
-                  <h3><b>Family Suite - 4 guests</b></h3>
+                  <h3><b>Grand Superior Room</b></h3>
                   
                   <div class="photo_cap">
                     <a href="img/facilities.jpg" class="lightbox" data-gall="gall-room"><i class="glyphicon glyphicon-search"></i></a>
@@ -450,14 +526,12 @@ img {vertical-align: middle;}
                 <a href="login" class="btn btn-medium grey darken-3" >
                   <i class="material-icons left">send</i>BOOK NOW
                 </a>
-              </div>
             </div>
-            
-
-               
+          </div>         
       </div>
-      
-    </div></br>
+    </div>
+  </br>
+  
     <div class="row">
       <div class="col-md-12">
           <div class="view_all">
@@ -631,7 +705,7 @@ img {vertical-align: middle;}
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
 
   
 <script>
@@ -662,6 +736,8 @@ img {vertical-align: middle;}
     dots[slideIndex-1].className += " active";
   }
   </script>
+
+
   <script>
     $(document).ready(function () {
       // INIT SIDENAV
