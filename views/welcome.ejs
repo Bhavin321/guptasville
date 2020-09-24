@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WELCOME</title>
+    <style>
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body id="home" class="scrollspy">
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <a href="/" class="brand-logo">Guptasville</a>
+        <a href="#" data-activates="mobile-nav" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="login">Login</a>
+          </li>
+          <li>
+            <a href="signup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- we put the sideNav li elements outside the div because its fixed div and we wont be able to access these links -->
+  <ul class="side-nav" id="mobile-nav">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="login">Login</a>
+    </li>
+    <li>
+      <a href="signup">Sign up</a>
+    </li>
+    <!-- add a footer to sidenav -->
+  </ul>
+
+    </br></br></br></br>
+
+    <section id="contact" class="section-contact scrollspy">
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card-panel teal white-text center">
+                        <img src="img/traffic-sign.png">
+
+
+
+                    </div>
+                    <ul class="collection with-header">
+                        <li class="collection-header">
+                            <b> View Your Bookings</b>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           <a href="details"><input type="submit" value="Your Bookings" class="btn"></a> 
+                        </li>
+                        <li class="collection-item">
+                            <b>Edit Booking</b>
+                            &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="edit"><input
+                                type="submit" value="Edit" class="btn"></a>
+
+                        </li>
+                        <li class="collection-item">
+                            <b>Delete Booking</b>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;
+                            <a href="delete"><input type="submit" value="Delete" class="btn"></a>
+                        </li>
+                        <li class="collection-item">
+                            <b>Book Your Room</b>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="reserve"><input type="submit" value="Book Room" class="btn"></a>
+                        </li>
+                        <li class="collection-item">
+                            <b> Log Out</b>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/"><input
+                                type="submit" value="Log Out" class="btn"></a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col s12 m6">
+
+                    <img class="responsive" src="img/w.jpg">
+                </div>
+            </div>
+    </section>
+
+    <br><br><br><br><br><br><br>
+    <footer class="section teal darken-2 white-text center">
+        <p class="flow-text">Guptasville &copy; 2020</p>
+      </footer>
+    </body>
+
+</html>

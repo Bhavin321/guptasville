@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDIT BOOKING</title>
+
+    <style>
+        ::placeholder {
+          color: black;
+          opacity: 1; /* Firefox */
+        }
+        
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+         color: black;
+        }
+        
+        ::-ms-input-placeholder { /* Microsoft Edge */
+         color: black;
+        }
+        </style>
+</head>
+
+<body id="home" class="scrollspy">
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <a href="/" class="brand-logo">Guptasville</a>
+                <a href="#" data-activates="mobile-nav" class="button-collapse">
+                  <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="login">Login</a>
+                  </li>
+                  <li>
+                    <a href="signup">Sign Up</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!-- we put the sideNav li elements outside the div because its fixed div and we wont be able to access these links -->
+          <ul class="side-nav" id="mobile-nav">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="login">Login</a>
+            </li>
+            <li>
+              <a href="signup">Sign up</a>
+            </li>
+            <!-- add a footer to sidenav -->
+          </ul>
+        
+    </br></br></br></br>
+    <section id="contact" class="section-contact scrollspy">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card-panel teal white-text center">
+                        <img src="/img/story.png">
+                        <h3>Modify Your Booking</h3>
+
+                    </div>
+                    <br>
+                    <ul class="collection with-header">
+                        <li class="collection-header">
+                            <h4>Policies and Guidelines</h4>
+                        </li>
+                        
+                        <li class="collection-item">
+                            We hope that you will enjoy your stay and make full use of our facilities. Hotel guests are kindly requested to observe the rules, outlined in Article 10 of the Accommodation Contract, so that their stay will be comfortable and safe. If guests do not observe these rules,the Hotel will be obliged to cancel their accommodations and the related contract as specified in Article 7.
+                        </li>
+
+                        <li class="collection-item">
+                            Rooms reservation are from 12 noon to 12 noon on next day
+                        </li>
+
+                        <li class="collection-item">
+                            Please do not smoke in bed or in any place where smoking presents a fire hazard.
+                        </li>
+
+                        <li class="collection-item">
+                            Please review the emergency exit instructions posted on the inside of the guest room door and locate the emergency exits on your floor promptly upon your arrival.
+                        </li>
+                       
+                    </ul>
+
+                    <br>
+                    <ul class="collection with-header">
+                        <li class="collection-header">
+                            <h4>Location</h4>
+                        </li>
+                        <li class="collection-item">
+                            Guptasville Agency
+                        </li>
+                        <li class="collection-item">
+                            Bangalore-566666
+                        </li>
+                        <li class="collection-item">
+                            Karnataka,India
+                        </li>
+                        <li class="collection-item">
+                            Contact Us- 080 2666 2666
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col s12 m6">
+                    <div class="card-panel grey lighten-3">
+                        <form method="POST" action="/edit">
+
+                        <div class="input-field">
+                            <input type="number" placeholder="Modify Mobile Number" name="contact">
+                            <label for="Name"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="number" placeholder="Modify no. of Adults" name="adults" >
+                            <label for="Name"></label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="number" placeholder="Modify no. of Children" name="children" >
+                            <label for="Name"></label>
+                        </div>
+
+                          <br>
+                        
+                        <div>
+                            <label for="Name" style="color: black;">Modify room type</label> <br><br>
+                            <input type="radio" id="male" name="room" value="1">
+                            <label for="male" style="color: black;">Single Suite -1 guest</label><br>
+                            <input type="radio" id="female" name="room" value="2">
+                            <label for="female" style="color: black;">Couple Suite -2 guest</label><br>
+                            <input type="radio" id="other" name="room" value="3">
+                            <label for="other" style="color: black;">Family Suite - 4 guests</label>
+                           <br> <input type="radio" id="other1" name="room" value="4">
+                            <label for="other1" style="color: black;">Premium Plus -6 guests</label>
+                        </div>   
+
+                        <br><br>
+                        <label for="birthday" style="color: black;">Modify Arrival Date</label>
+                        <div class="input-field">
+                            <input type="date"  id="datefield" name="arrival" min='1899-01-01' max='2000-13-13'>
+                            <label for="birthday"></label>
+                        </div>
+
+                         <br><br>
+
+                        <label for="birthday" style="color: black;">Modify Departure Date</label>
+                        <div class="input-field">
+                            <input type="date" id="datefield1" name="departure">
+                            <label for="birthday"></label>
+                        </div>
+                        <br>
+                     
+                        </br></br>
+                        <center> <input type="submit" value="MODIFY" class="btn" onclick=" myFunction();"></center>
+                        </br>
+                        <center> <input type="submit" value="LOG OUT" class="btn"></center>
+                        </br>
+                    </form>
+                    </div>      
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section teal darken-2 white-text center">
+        <p class="flow-text">Guptasville &copy; 2020</p>
+      </footer>
+    </body>
+
+<script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    if(dd<10){
+            dd='0'+dd
+        } 
+        if(mm<20){
+            mm='0'+mm
+        } 
+
+    today = yyyy+'-'+mm+'-'+dd;
+    document.getElementById("datefield").setAttribute("min", today);
+
+
+    dd=dd+1;
+    today = yyyy+'-'+mm+'-'+dd;
+    document.getElementById("datefield1").setAttribute("min", today);
+
+</script>
+
+<script>
+    function myFunction() {
+      alert("YOUR BOOKING IS MODIFIED");
+    }
+    </script>
+
+</html>

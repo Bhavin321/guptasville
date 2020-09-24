@@ -1,0 +1,97 @@
+app.post("/upd", (req, res) => {
+  const age = req.body.age;
+  const address = req.body.add;
+  const contact = req.body.cont;
+  const city = req.body.city;
+
+  console.log("data assas");
+  console.log(age);
+  console.log(address);
+  console.log(contact);
+  console.log(city);
+
+  const password = req.body.pass;
+  if (age) {
+    user.findOneAndUpdate(
+      { Username: global_id },
+      { $set: { age: age } },
+      function (err, abc) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("data assas");
+          console.log(age);
+          console.log(address);
+          console.log(contact);
+          console.log(city);
+
+          console.log(abc);
+          //res.render("login");
+        }
+      }
+    );
+  }
+  if (address) {
+    user.findOneAndUpdate(
+      { Username: global_id },
+      { $set: { address: address } },
+      function (err, abc) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("data assas");
+          console.log(age);
+          console.log(address);
+          console.log(contact);
+          console.log(city);
+          console.log(abc);
+          //res.render("login");
+        }
+      }
+    );
+  }
+
+  if (city) {
+    user.findOneAndUpdate(
+      { Username: global_id },
+      { $set: { city: city } },
+      function (err, abc) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(abc);
+          //res.render("login");
+        }
+      }
+    );
+  }
+  if (contact) {
+    user.findOneAndUpdate(
+      { Username: global_id },
+      { $set: { phone: contact } },
+      function (err, abc) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(abc);
+          // res.render("login");
+        }
+      }
+    );
+  }
+  if (password) {
+    user.findOneAndUpdate(
+      { Username: global_id },
+      { $set: { Password1: password } },
+      function (err, abc) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(abc);
+          //res.render("login");
+        }
+      }
+    );
+  }
+  res.render("login");
+});

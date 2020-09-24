@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- DATE PICKER -->
+    <link href="../css/datepicker_css/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/datepicker_css/datepicker.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/javascript/jquery-ui-1.8.18.custom.min.js"></script>
+
+    <link rel="stylesheet" href="/css/links/style-Arrangement.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- DATE PICKER END-->
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guptasville</title>
+
+  
+
+  <style>
+
+.carousel,
+.item,
+.active {
+    height: 70%;
+}
+
+.carousel-inner {
+  height: 100%;
+  background: #000;
+}
+
+.carousel-caption{padding-bottom:80px;}
+
+h2{font-size: 60px;}
+p{padding:10px}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    opacity:0.6;
+}
+
+
+
+
+/**
+ * Button
+ */
+.btn-transparent {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn-transparent:hover {
+  background-color: #fff;
+}
+
+.btn-rounded {
+  border-radius: 70px;
+}
+
+.btn-large {
+  padding: 11px 45px;
+  font-size: 18px;
+}
+
+/**
+ * Change animation duration
+ */
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+
+
+.carousel .carousel-item {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel .carousel-item:first-of-type {
+    background-image: url("https://ichef.bbci.co.uk/images/ic/960x960/p08634k6.jpg");
+}
+
+.carousel .carousel-item:nth-of-type(2) {
+    background-image: url("http://s9.favim.com/orig/130806/flower-flowers-photography-pink-Favim.com-833641.jpg");
+}
+
+.carousel .carousel-item:last-of-type {
+    background-image: url("https://4.bp.blogspot.com/-pxMLcrD3N7I/UjAMNkqM43I/AAAAAAAAABQ/2-etadUS_48/s640/flowers.jpg");
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+  </style>
+</head>
+
+<body id="home" class="scrollspy">
+  <div class="navbar-fixed">
+    <nav class="teal">
+      <div class="container">
+        <a href="/" class="brand-logo">Guptasville</a>
+        <a href="#" data-activates="mobile-nav" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="login">Login</a>
+          </li>
+          <li>
+            <a href="signup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- we put the sideNav li elements outside the div because its fixed div and we wont be able to access these links -->
+  <ul class="side-nav" id="mobile-nav">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="login">Login</a>
+    </li>
+    <li>
+      <a href="signup">Sign up</a>
+    </li>
+    <!-- add a footer to sidenav -->
+  </ul>
+
+  <!-- Section: Slider -->
+
+  <!-- Full Page Image Background Carousel Header -->
+ <div>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      
+      <img src="img/backgroundAnimation1.jpg" style="width:100%;height:50% ">
+      <div class="text"><h3>Discover a hotel that defines a new dimension of luxury.</h3></div>
+    </div>
+    
+    <div class="mySlides fade">
+      
+      <img src="img/banner.jpg" style="width:100%;height:50% ">
+      <div class="text"><h3>Feel the class</h3></div>
+    </div>
+    
+    <div class="mySlides fade">
+      
+      <img src="img/backgroundAnimation5.jpg" style="width:100%;height:50%">
+      <div class="text"><h3>Your home away from home</h3></div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    
+ </div>
+
+
+  <!-- Section: Search -->
+          <div style="background-color: teal;">
+            <br><br>
+           <center> <span style="color: white; font-size: 17pt; line-height: 0.9;"> <b> CHECK RATES &amp; AVAILABILITY</b></span></center><br><br><br>
+            <div class="w3-row-padding">
+
+                <div class="w3-col m3" >
+                    <label style="color: #ffffff"><i class="fa fa-calendar-o"></i> <b>Check In</b></label>
+                    <input class="w3-input w3-border" id="datecheckin" type="text" maxlength="10" placeholder="DD MM YYYY" size="8" style="color: black;background-color: white;">
+                </div>
+                <div class="w3-col m3">
+                    <label style="color: #ffffff"><i class="fa fa-calendar-o"></i> <b>Check Out</b></label>
+                    <input class="w3-input w3-border" id="datecheckout" maxlength="10" placeholder="DD MM YYYY" size="8" style="color: black;background-color: white;">
+                </div>
+                <div class="w3-col m2">
+                    <label style="color: #ffffff"><i class="fa fa-male"></i> <b>Adults</b></label>
+                    <input class="w3-input w3-border" type="number" min="0" max="4" placeholder="1" style="color: black;background-color: white;">
+                </div>
+                <div class="w3-col m2">
+                    <label style="color: #ffffff"><i class="fa fa-child"></i> <b>Kids</b></label>
+                    <input class="w3-input w3-border" type="number" min="0" max="4" placeholder="0" style="color: black;background-color: white;">
+                </div>
+                <div class="w3-col m2">
+                    <label style="color: #ffffff"><i class="fa fa-search"></i> <b>Check Availability</b></label><br>
+                    <button class="w3-button w3-block w3-white">Check Availability</button>
+                </div>
+            </div>
+            <br><br><br><br>
+          </div>    
+  <!-- Section: Icon Boxes -->
+  <section class="section section-icons grey lighten-4 center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="fas fa-hotel fa-3x"></i>
+            <h3>Great Locaton</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, doloremque.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="fas fa-utensils fa-3x"></i>
+            <h3>Free Meals</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, doloremque.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="fas fa-dumbbell fa-3x"></i>
+            <h3>Fitness Room</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, doloremque.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Popular -->
+  <section class="section section-icons grey lighten-4 center">
+    <div class="container">
+      <h4 class="center">
+        <span class="teal-text"><h2>ACCOMODATION</h2></span></h4></br>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <img src="img/room3.jpg" alt="" width="350" height="250"  id="acc">
+            <div class="room-title" >
+              <h3><b>Single Suite -1 guest</b></h3>
+              <div class="photo_cap">
+                <a href="img/facilities.jpg" class="lightbox" data-gall="gall-room"><i class="glyphicon glyphicon-search"></i></a>
+            </div>
+        </div></br>
+        <div class="room_title" >
+            <h5><b>Start From RS. 1800.00 / Night</b></h5>
+          </div>
+          <div class="ttl-link">
+            <a href="#">Check Details <img src="img/icon_calendar.png" alt=""></a>
+          </div>
+
+          </div>
+          <div class="col s12 center">
+            <a href="login" class="btn btn-medium grey darken-3">
+              <i class="material-icons left">send</i>BOOK NOW
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="card-panel">
+              <img src="img/room1.jpg" alt=""  width="350" height="250">
+              <div class="room-title">
+                <h3><b>Couple Suite -2 guests</b></h3>
+                <div class="photo_cap">
+                  <a href="img/facilities.jpg" class="lightbox" data-gall="gall-room"><i class="glyphicon glyphicon-search"></i></a>
+              </div>
+          </div></br>
+          <div class="room_title">
+              <h5><b>Start From RS. 2800.00 / Night</b></h5>
+            </div>
+            <div class="ttl-link">
+              <a href="#">Check Details <img src="img/icon_calendar.png" alt=""></a>
+            </div>
+            </div>
+            <div class="col s12 center">
+              <a href="login" class="btn btn-medium grey darken-3">
+                <i class="material-icons left">send</i>BOOK NOW
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <img src="img/room2.jpg" alt=""  width="350" height="250">
+                <div class="room-title">
+                  <h3><b>Family Suite - 4 guests</b></h3>
+                  
+                  <div class="photo_cap">
+                    <a href="img/facilities.jpg" class="lightbox" data-gall="gall-room"><i class="glyphicon glyphicon-search"></i></a>
+                </div>
+            </div></br>
+            <div class="room_title">
+                <h5><b>Start From RS. 4800.00 / Night</b></h5>
+              </div>
+              <div class="ttl-link">
+                <a href="#">Check Details <img src="img/icon_calendar.png" alt=""></a>
+              </div>
+              </div>
+              <div class="col s12 center">
+                <a href="login" class="btn btn-medium grey darken-3" >
+                  <i class="material-icons left">send</i>BOOK NOW
+                </a>
+              </div>
+            </div>
+            
+
+               
+      </div>
+      
+    </div></br>
+    <div class="row">
+      <div class="col-md-12">
+          <div class="view_all">
+              <a  class="btn btn-medium primary"  role="button" href="#zz">View All rooms</a>
+          </div>
+      </div>
+  </div>
+  </section>
+
+
+ <!-- <section id="popular" class="section section-popular scrollspy">
+    <div class="container">
+      <div class="row">
+        <h4 class="center">
+          <span class="teal-text">ACCOMODATION</span></h4>
+          <section class="roomArea">
+            <div class="container">
+                <div class="row">
+                  
+                    <div class="all_rooms"> 
+                        <div class="col-md-4 col-sm-4">
+                            <div class="single_room_item">
+                                <div class="room_photo" >
+                                    <img src="img/room3.jpg" alt="" width="350" height="250">
+                                    <div class="room-title">
+                                        <h3>Single Room</h3>
+                                    </div>
+                                    <div class="photo_cap">
+                                        <a href="img/facilities.jpg" class="lightbox" data-gall="gall-room"><i class="glyphicon glyphicon-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="room_title">
+                                    <h2>Start From RM 80.00 / Night</h2>
+                                </div>
+                                <div class="ttl-link">
+                                  <a href="single-room.html">Check Details <img src="img/icon_calendar.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </div>-->
+                        <!-- Single Room Item End -->
+                        
+                        <!-- Single Room Item Start -->
+                      <!--    <div class="col-md-4 col-sm-4">
+                            <div class="single_room_item">
+                                <div class="room_photo">
+                                    <img src="img/room1.jpg" alt=""  width="350" height="250">
+                                    <div class="room-title">
+                                        <h3>Family Special Room</h3>
+                                    </div>
+                                    <div class="photo_cap">
+                                        <a href="img/grandRoom.jpg" class="lightbox" data-gall="gall-room"><i class="glyphicon glyphicon-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="room_title">
+                                    <h2>Start From RM 199.00 / Night</h2>
+                                </div>
+                                <div class="ttl-link">
+                                        <a href="single-room.html">Check Details <img src="img/icon_calendar.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- Single Room Item End -->
+                        
+                        <!-- Single Room Item Start -->
+ <!-- <div class="col-md-4 col-sm-4 col-md-offset-0 col-sm-offset-3">
+                            <div class="single_room_item">
+                                <div class="room_photo">
+                                    <img src="img/room2.jpg" alt=""  width="350" height="250">
+                                    <div class="room-title">
+                                        <h3>Grand Superior Room</h3>
+                                    </div>
+                                    <div class="photo_cap">
+                                        <a href="img/hotel_room_photo_3.jpg" class="lightbox" data-gall="gall-room"><i class="glyphicon glyphicon-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="room_title">
+                                    <h2>Start From RM 285.00 / Night</h2>
+                                </div>
+                                <div class="ttl-link">
+                                        <a href="single-room.html">Check Details <img src="img/icon_calendar.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>-->
+                        <!-- Single Room Item End -->
+                        
+                    </div>
+                    <!--====| All Rooms End |====-->
+                    
+                </div>
+                <!-- <div class="row">
+                    <div class="col-md-12">
+                        <div class="view_all">
+                            <a class="rm_btn btn-primary" role="button" href="rooms.html">View All rooms</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </div>
+      <div class="row">
+        <div class="col s12 center">
+          <a href="#contact" class="btn btn-large grey darken-3">
+            <i class="material-icons left">send</i>BOOK NOW
+          </a>
+        </div>
+      </div>-->
+    </div>
+  </section>
+
+  <br><br><br>
+
+  <!-- Section: Gallery -->
+
+  <section id="gallery" class="section section-gallery scrollspy">
+    <div class="container">
+      <h4 class="center">
+        <span class="teal-text">Room</span> Photos
+      </h4>
+      <div class="row">
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/room1.jpg" alt="" id="zz">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/room2.jpg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/room3.jpg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/room4.jpg" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/room5.jpg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/room6.jpg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/room1.jpg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/room2.jpg" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/parking.jpg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/gym.jpg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/business-center.jpg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="img/gym.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Contact -->
+  
+  <!-- Footer section -->
+  <footer class="section teal darken-2 white-text center">
+    <p class="flow-text">Guptasville &copy; 2020</p>
+  </footer>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  <script>
+    $(document).ready(function () {
+      // INIT SIDENAV
+      $(".button-collapse").sideNav();
+
+      //INIT SLIDER
+      $(".slider").slider({
+        indicators: false,
+        height: 500,
+        transition: 500,
+        interval: 6000
+      });
+
+      //AUTOCOMPLETE
+      $(".autocomplete").autocomplete({
+        data: {
+          "Aruba": null,
+          "Cancun Mexico": null,
+          "Hawaii": null,
+          "Florida": null,
+          "California": null,
+          "Jamaica": null,
+          "Europe": null,
+          "The Bahamas": null
+        }
+      });
+
+      //INIT SCROLLSPY
+      $(".scrollspy").scrollSpy();
+
+    });
+  </script>
+</body>
+
+</html>

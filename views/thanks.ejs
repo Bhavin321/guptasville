@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THANKS FOR BOOKING</title>
+</head>
+
+<body id="home" class="scrollspy">
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <a href="/" class="brand-logo">Guptasville</a>
+        <a href="#" data-activates="mobile-nav" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="login">Login</a>
+          </li>
+          <li>
+            <a href="signup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- we put the sideNav li elements outside the div because its fixed div and we wont be able to access these links -->
+  <ul class="side-nav" id="mobile-nav">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="login">Login</a>
+    </li>
+    <li>
+      <a href="signup">Sign up</a>
+    </li>
+    <!-- add a footer to sidenav -->
+  </ul>
+
+    </br></br></br></br>
+    <section id="contact" class="section-contact scrollspy">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card-panel teal white-text center">
+                        <img src="img/thank-you.png">
+
+                        <h3>Thank You For Booking</h3>
+
+                    </div>
+                    <ul class="collection with-header">
+                        <li class="collection-header">
+                            <h4>Location</h4>
+                        </li>
+                        <li class="collection-item">
+                            Guptasville Agency
+                        </li>
+                        <li class="collection-item">
+                            Bangalore-566666
+                        </li>
+                        <li class="collection-item">
+                            Karnataka,India
+                        </li>
+                        <li class="collection-item">
+                            Contact Us- 080 2666 2666
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col s12 m6">
+                    <div class="card-panel grey lighten-3">
+                    </br></br>
+                    <label for="Name">
+                        <font color="black" size="3px"><b>Name:</b> &nbsp;<%= candidateList.first %> <%= candidateList.last %></font>
+                    </label></br></br></br>
+                    <label for="Name">
+                        <font color="black" size="3px"><b>Email:</b>&nbsp;<%= candidateList.email %></font>
+                    </label></br></br></br>
+
+                    <label for="Name">
+                        <font color="black" size="3px"><b>Room Type:</b> &nbsp;
+                        <%if (candidateList.room== 1) { %>
+                            <p style="display: inline;">SINGLE SUITE RS.1800</p>
+                          <% } %>
+
+                          <%if (candidateList.room== 2) { %>
+                             <p style="display: inline;">COUPLE SUITE RS.2800</p>
+                           <% } %>
+
+                           <%if (candidateList.room== 3) { %>
+                             <p style="display: inline;">FAMILY SUITE RS.3800</p>
+                           <% } %>
+
+                           <%if (candidateList.room== 4) { %>
+                             <p style="display: inline;">PREMIUM PLUS SUITE RS.5000</p>
+                           <% } %></font>
+                    </label></br></br></br>
+
+                    <label for="Name">
+                        <font color="black" size="3px"><b>Arriving Date:</b> &nbsp;<%= candidateList.arrival %></font>
+                    </label></br></br></br>
+                    
+                    <label for="Name">
+                        <font color="black" size="3px"><b>Departure Date:</b>&nbsp;<%= candidateList.departure %></font>
+                    </label></br></br></br>
+                    <label for="Name">
+                        <font color="black" size="3px"><b>Phone Number:</b>&nbsp;<%= candidateList.contact %></font>
+                    </label>
+                    </br></br>
+
+                </br></br>
+                <center><a href="/"><input type="submit" value="Log Out" class="btn"></a></center>
+                </br></br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br><br><br><br><br>
+    <footer class="section teal darken-2 white-text center">
+        <p class="flow-text">Guptasville &copy; 2020</p>
+      </footer>
+
+      </body>
+
+      </html>
